@@ -1,0 +1,16 @@
+
+<div class="card-list">
+  <div class="tp-wrapper" *ngFor="let card of cards">
+    <div class="tp-box" (click)="toggleFlip(card)" [@flipState]="card.flip">
+      <div class="tp-box__side tp-box__front">
+        <h2>{{ card.title }}</h2>
+      </div>
+      <div class="tp-box__side tp-box__back">
+        <h2>Name: {{ card.name }}</h2>
+        <p>Description: {{ card.description }}</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
